@@ -9,7 +9,7 @@ cs247App.config(['$routeProvider',
                 templateUrl: 'components/chat/chatTemplate.html',
                 controller: 'ChatController'
             }).
-            when('/profile', {
+            when('/profile/:userId', {
                 templateUrl: 'components/profile/profileTemplate.html',
                 controller: 'ProfileController'
             }).

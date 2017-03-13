@@ -1,7 +1,7 @@
 'use strict';
 
-cs247App.controller('RegisterController', ['$scope',
-  function ($scope) {
+cs247App.controller('RegisterController', ['$scope', '$location',
+  function ($scope, $location) {
     /*
      *
      */
@@ -26,16 +26,18 @@ cs247App.controller('RegisterController', ['$scope',
      };     
 
      $scope.progressFromAdditionalSurgeries = function(surgeries) {
+          //$scope.main.user.additionalSurgeries =  surgeries;
           $scope.step++;
      };    
 
-     $scope.progressFromRecovery = function(recoveryPeriod) {          
+     $scope.progressFromRecovery = function(recoveryPeriod) {
+          //$scope.main.user.recoveryPeriod = recoveryPeriod;
           $scope.step++;
      };    
 
-     $scope.progressFromHormone = function(hormone) {          
+     $scope.progressFromHormone = function(hormone) {        
+          //$scope.main.user.hormone = hormone;  
           $scope.step++;
+          $location.path("/select");
      };             
-
-     /* assemble a json object with each click */
   }]);
