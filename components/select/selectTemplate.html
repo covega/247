@@ -7,11 +7,11 @@
 					<div class="card">
 						<div>{{mentor.photo}}</div>
 						<div>{{mentor.name}}</div>
-						<div>{{mentor.age}}</div>					
+						<div>{{mentor.age}} years old</div>					
 						<div>{{mentor.type}}</div>
-						<div>{{mentor.additionalSurgeries}}</div>
-						<div>{{mentor.recoveryPeriod}}</div>
-						<div>{{mentor.hormone}}</div>	
+						<div>Additional Surgeries: {{mentor.additionalSurgeries}}</div>
+						<div>Recovery: {{mentor.recoveryPeriod}}</div>
+						<div ng-show="mentor.hormone">Hormone Replacement</div>	
 					</div>
 				</div>
 			</div>
