@@ -37,6 +37,12 @@ cs247App.config(['$routeProvider',
 cs247App.controller('MainController', ['$scope', '$rootScope', '$location',
   function ($scope, $rootScope, $location) {
         $rootScope.main = {};
+
+        /* fields: 
+        * surgeryType: string
+        * reason: string
+        * date: date
+        */
         $rootScope.main.user = {};
 
 }]);

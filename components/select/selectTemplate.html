@@ -1,15 +1,21 @@
 <div>
 	<h1>Select someone to chat with</h1>
-	<div>
-		<div>
-			<div>User1</div>
-			<div>User2</div>
-			<div>User3</div>
-		</div>
-		<div>
-			<div>User4</div>
-			<div>User5</div>
-			<div>User6</div>
+	<div class="container">
+		<div class="row">
+			<div ng-repeat="mentor in mentors">
+				<div class="col s4">
+					<div class="card">
+						<div>{{mentor.photo}}</div>
+						<div>{{mentor.name}}</div>
+						<div>{{mentor.age}} years old</div>					
+						<div>{{mentor.type}}</div>
+						<div>Additional Surgeries: {{mentor.additionalSurgeries}}</div>
+						<div>Recovery: {{mentor.recoveryPeriod}}</div>
+						<div ng-show="mentor.hormone">Hormone Replacement</div>	
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
+	<p> Want better matches? Give us more information </p>
 </div>
