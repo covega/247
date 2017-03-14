@@ -9,6 +9,10 @@ cs247App.config(['$routeProvider',
                 templateUrl: 'components/chat/chatTemplate.html',
                 controller: 'ChatController'
             }).
+            when('/landing', {
+                templateUrl: 'components/landing/landingTemplate.html',
+                controller: 'LandingController'
+            }).              
             when('/profile/:userId', {
                 templateUrl: 'components/profile/profileTemplate.html',
                 controller: 'ProfileController'
@@ -26,14 +30,14 @@ cs247App.config(['$routeProvider',
                 controller: 'SelectController'
             }).  
             otherwise({
-                redirectTo: '/register'
+                redirectTo: '/landing'
             });
     }]);
 
 cs247App.controller('MainController', ['$scope', '$rootScope', '$location',
   function ($scope, $rootScope, $location) {
-        $scope.main = {};
-
+        $rootScope.main = {};
+        $rootScope.main.user = {};
 
 }]);
 
