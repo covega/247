@@ -1,0 +1,35 @@
+<div ng-cloak>
+	<div class = "container" style = "text-align:center;">
+		<div class = "row">
+			<div class = "col s12">
+				Photo
+			</div>
+		</div>
+		<div class = "row">
+			<div class = "col s12">
+				<h2> {{profile.name}} </h2>
+				<h2> {{profile.age}} </h2>
+			</div>
+		</div>		
+		<div class = "row">
+			<div ng-repeat="label in profile.labels">
+				<div class = "col s6">
+					<p>{{label}}</p>
+				</div>
+			</div>
+		</div>
+		<div class = "row">
+			<div class = "col s12">
+				<p> Surgery on: {{profile.date}} </p>				
+			</div>
+		</div>				
+		<div class = "row">
+			<div class = "col s12">
+				<p> {{profile.description}} </p>				
+			</div>
+		</div>
+		<div class = "row">
+			<button ng-click="chat()"> Chat with {{profile.name}} </button>
+		</div>		
+	</div>
+</div>
