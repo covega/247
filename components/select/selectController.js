@@ -16,13 +16,13 @@ cs247App.controller('SelectController', ['$scope', '$location',
      $scope.mentors = []
      for(var i = 0; i < 6; i++){
      	$scope.mentors.push({
-     		photo: "coming soon",
+     		photo: "photo coming soon",
      		name: "Amy M.",
      		age: "44",
      		type: "total",
      		additonalSurgeries: "bladder sling",
      		recoveryPeriod: "forever",
      		hormone: "yes"
-     	})
+     	});
      }
   }]);
