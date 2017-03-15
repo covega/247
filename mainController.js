@@ -5,7 +5,7 @@ var cs247App = angular.module('cs247App', ['ngRoute']);
 cs247App.config(['$routeProvider',
     function ($routeProvider) {
         $routeProvider.
-            when('/chat', {
+            when('/chat/:userId', {
                 templateUrl: 'components/chat/chatTemplate.html',
                 controller: 'ChatController'
             }).
@@ -16,10 +16,6 @@ cs247App.config(['$routeProvider',
             when('/profile/:userId', {
                 templateUrl: 'components/profile/profileTemplate.html',
                 controller: 'ProfileController'
-            }).
-            when('/profile-creation', {
-                templateUrl: 'components/profile-creation/profile-creationTemplate.html',
-                controller: 'Profile-CreationController'
             }).
             when('/register', {
                 templateUrl: 'components/register/registerTemplate.html',
