@@ -5,7 +5,7 @@ var cs247App = angular.module('cs247App', ['ngRoute']);
 cs247App.config(['$routeProvider',
     function ($routeProvider) {
         $routeProvider.
-            when('/chat', {
+            when('/chat/:userId', {
                 templateUrl: 'components/chat/chatTemplate.html',
                 controller: 'ChatController'
             }).
@@ -58,6 +58,7 @@ cs247App.controller('MainController', ['$scope', '$rootScope', '$location',
 	            additonalSurgeries: $rootScope.main.user.additonalSurgeries ? $rootScope.main.user.additonalSurgeries : "bladder sling",
 	            recoveryPeriod: $rootScope.main.user.recoveryPeriod ? $rootScope.main.user.recoveryPeriod : "3 months",
 	            hormone: $rootScope.main.user.hormone ? true : false,
+	            date: "April '17",
 	        },
 	        {
 	            id: 2,
@@ -68,6 +69,7 @@ cs247App.controller('MainController', ['$scope', '$rootScope', '$location',
 	            additonalSurgeries: $rootScope.main.user.additonalSurgeries ? $rootScope.main.user.additonalSurgeries : "bladder sling",
 	            recoveryPeriod: $rootScope.main.user.recoveryPeriod ? $rootScope.main.user.recoveryPeriod : "3 months",
 	            hormone: $rootScope.main.user.hormone ? true : false,
+	            date: "April '17",
 	        },
 	        {
 	            id: 3,
@@ -78,6 +80,7 @@ cs247App.controller('MainController', ['$scope', '$rootScope', '$location',
 	            additonalSurgeries: $rootScope.main.user.additonalSurgeries ? $rootScope.main.user.additonalSurgeries : "bladder sling",
 	            recoveryPeriod: $rootScope.main.user.recoveryPeriod ? $rootScope.main.user.recoveryPeriod : "3 months",
 	            hormone: $rootScope.main.user.hormone ? true : false,
+	            date: "April '17",
 	        },
 	        {
 	            id: 4,
@@ -88,6 +91,7 @@ cs247App.controller('MainController', ['$scope', '$rootScope', '$location',
 	            additonalSurgeries: $rootScope.main.user.additonalSurgeries ? $rootScope.main.user.additonalSurgeries : "bladder sling",
 	            recoveryPeriod: $rootScope.main.user.recoveryPeriod ? $rootScope.main.user.recoveryPeriod : "3 months",
 	            hormone: $rootScope.main.user.hormone ? true : false,
+	            date: "April '17",
 	        },
 	        {
 	            id: 5,
@@ -98,6 +102,7 @@ cs247App.controller('MainController', ['$scope', '$rootScope', '$location',
 	            additonalSurgeries: $rootScope.main.user.additonalSurgeries ? $rootScope.main.user.additonalSurgeries : "bladder sling",
 	            recoveryPeriod: $rootScope.main.user.recoveryPeriod ? $rootScope.main.user.recoveryPeriod : "3 months",
 	            hormone: $rootScope.main.user.hormone ? true : false,
+	            date: "April '17",
 	        },
 	        {
 	            id: 6,
@@ -108,6 +113,7 @@ cs247App.controller('MainController', ['$scope', '$rootScope', '$location',
 	            additonalSurgeries: $rootScope.main.user.additonalSurgeries ? $rootScope.main.user.additonalSurgeries : "bladder sling",
 	            recoveryPeriod: $rootScope.main.user.recoveryPeriod ? $rootScope.main.user.recoveryPeriod : "3 months",
 	            hormone: $rootScope.main.user.hormone ? true : false,
+	            date: "April '17",
 	        }
      	];
 
