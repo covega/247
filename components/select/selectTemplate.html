@@ -7,7 +7,7 @@
 		<div class="row">
 			<div ng-repeat="mentor in mentors">
 				<div class="col s4">
-					<div class="card">
+					<div class="card" ng-click="selectProfile(mentor)">
 						<div>{{mentor.photo}}</div>
 						<div style="text-align: center;">{{mentor.name}}</div>
 						<div style="text-align: center;">{{mentor.age}}</div>
