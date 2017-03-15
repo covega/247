@@ -1,13 +1,17 @@
 <div>
-	<h1>Select someone to chat with</h1>
+
 	<div class="container">
+		<div class="row">
+			<h3>Connect with someone who has been through this before</h3>
+		</div>
 		<div class="row">
 			<div ng-repeat="mentor in mentors">
 				<div class="col s4">
-					<div class="card">
+					<div class="card" ng-click="selectProfile(mentor)">
 						<div>{{mentor.photo}}</div>
-						<div>{{mentor.name}}</div>
-						<div>{{mentor.age}} years old</div>					
+						<div style="text-align: center;">{{mentor.name}}</div>
+						<div style="text-align: center;">{{mentor.age}}</div>
+						<div>{{mentor.date}}</div>
 						<div>{{mentor.type}}</div>
 						<div>Additional Surgeries: {{mentor.additionalSurgeries}}</div>
 						<div>Recovery: {{mentor.recoveryPeriod}}</div>

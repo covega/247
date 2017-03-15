@@ -8,8 +8,10 @@ cs247App.controller('LandingController', ['$scope', '$location', '$rootScope',
      $scope.main = {};
 
      $scope.selectPatientType = function(currPatient) {
-          $rootScope.main.user.currPatient = currPatient;
-          $location.path("/select/");
+        console.log($rootScope.main.user);
+        $rootScope.main.user.currPatient = currPatient;
+        console.log($rootScope.main.user);
+        $location.path("/select/");
      };
 
   }]);
