@@ -24,9 +24,9 @@
 				</div>
 				<div class = "row chatbox">
 					<div class = "input-field col s11">
-						<input ng-keypress="send($event)" placeholder="send a message" type="text" class="validate" id = "chatbox"/>
+						<input ng-keypress="sendViaEnter($event)" placeholder="send a message" type="text" class="validate" id = "chatbox"/>
 					</div>
-					<div ng-click="send()" class = "col s1">
+					<div ng-click="sendViaClick()" class = "col s1">
 						<button> send </button>
 					</div>
 				</div>

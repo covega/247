@@ -24,7 +24,7 @@ cs247App.controller('ChatController', ['$scope', '$location', '$rootScope',
       }
     ];
     
-    $scope.send = function() {
+    $scope.sendViaClick = function() {
       var msg = $('#chatbox').val();
       //var timeStamp = "<span class='time'><i>Delivered: " +  new Date().toLocaleString() + "</i></span>"
       //$('#messages').append($("<li class ='user'><p>" + msg + timeStamp + "</p><br/></li>"));      
@@ -33,7 +33,7 @@ cs247App.controller('ChatController', ['$scope', '$location', '$rootScope',
       console.log(msg);
     }
 
-    $scope.send = function(event) {
+    $scope.sendViaEnter = function(event) {
       if (event.which === 13){
         var msg = $('#chatbox').val();
         //var timeStamp = "<span class='time'><i>Delivered: " +  new Date().toLocaleString() + "</i></span>"
