@@ -40,7 +40,10 @@ cs247App.controller('ChatController', ['$scope', '$location', '$rootScope',
         var msg = $('#chatbox').val();
         //var timeStamp = "<span class='time'><i>Delivered: " +  new Date().toLocaleString() + "</i></span>"
         //$('#messages').append($("<li class ='user'><p>" + msg + timeStamp + "</p><br/></li>"));      
-        $('#messages').append($("<li class ='user'><p>" + msg + "</p><br/></li>"));      
+        $scope.messages.push({
+          text: msg,
+          sender: 'user'
+        });
         $('#chatbox').val("");
         console.log(msg);
       }
