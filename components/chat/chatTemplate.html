@@ -7,13 +7,23 @@
 				<div>{{partner.photo}}</div>
 				<div>{{partner.type}}</div>
 				<div>{{partner.additionalSurgery}}</div>
-				<div>Saved Notes</div>
+				<div>
+					<h3>Saved Notes</h3>
+					<div ng-repeat="note in notes">
+						<p> {{note}} </p>
+					</div>
+				</div>
 			</div>
 			<div class="col s9 chatbox">
 				<div class = "row chat">
 					<ul id="messages">
 						<li ng-repeat="message in messages"> 
-							<p class="{{message.sender}}">{{message.text}}</p>
+							<span class="{{message.sender}}">
+								<p>
+									{{message.text}}
+								</p>
+								<button ng-click="saveNote($event)">save</button>
+							</span>							
 						</li>
 					</ul>
 				</div>
@@ -27,7 +37,7 @@
 						<input ng-keypress="sendViaEnter($event)" placeholder="send a message" type="text" class="validate" id = "chatbox"/>
 					</div>
 					<div ng-click="sendViaClick()" class = "col s1">
-						<button> send </button>
+						<button>send</button>
 					</div>
 				</div>
 				<div class = "stickers">

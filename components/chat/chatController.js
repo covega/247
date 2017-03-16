@@ -13,6 +13,8 @@ cs247App.controller('ChatController', ['$scope', '$location', '$rootScope',
     var id = parseInt(path.substring(path.length-1));
     $scope.partner = $rootScope.main.mentors[id-1];
 
+    $scope.notes = [];
+
     $scope.messages = [
       {
         text:'hey! I have so many questions! Can you help?', 
@@ -42,7 +44,13 @@ cs247App.controller('ChatController', ['$scope', '$location', '$rootScope',
         $('#chatbox').val("");
         console.log(msg);
       }
-    }    
+    }
+
+    $scope.saveNote = function(event) {
+      var msg = $(event.target.parentNode).children()[0].innerHTML
+      console.log(msg);
+      $scope.notes.push(msg);
+    }
 
 
   }]);
