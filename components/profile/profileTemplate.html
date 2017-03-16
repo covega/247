@@ -2,30 +2,29 @@
 
 </head>
 <div ng-cloak>
+	<center>
 	<div class="row">
-		<center>
+
 			<br><br><br><br><br><br>
-			<img src="pic_mountain.jpg" alt="userDetails.photo" style="width:400px;height:400px;">
-			<!-- <div>{{userDetails.photo}}</div> -->
+			<img src="{{userDetails.photo}}" alt="This user hasn't uploaded a photo yet!">
 			<h1 style="text-align: center;">{{userDetails.name}} - {{userDetails.age}}</h1>
 			<div class="chip">
-				Tags Here
+				{{userDetails.type}} hysterectomy
 			</div>
 			<div class="chip">
-				Tags Here
+				{{userDetails.additionalSurgeries}}
 			</div>
 			<div class="chip">
-				Tags Here
+				{{userDetails.recoveryPeriod}} recovery
 			</div>
-			<div class="chip">
-				Tags Here
+			<div ng-show="userDetails.hormone" class="chip">
+				Hormone Replacement
 			</div>
-			<h5>{{userDetails.type}} hysterectomy</h5>
-			<h5>Additional Surgeries: {{userDetails.additionalSurgeries}}</h5>
-			<h5>Recovery: {{userDetails.recoveryPeriod}}</h5>
-			<div ng-show="userDetails.hormone">Hormone Replacement</div>
-			<button ng-click="chat(userDetails.id)" class="btn waves-effect waves-light" type="submit" name="action">Chat with {{userDetails.name}}
+	</div>
+	<div class = "row">
+			<button ng-click="chat(userDetails.id)" class="btn waves-effect waves-light pink" type="submit" name="action">		Chat with {{userDetails.name}}
 			</button>
-		</center>
+	</div>
+	</center>
 	</div>
 </div>

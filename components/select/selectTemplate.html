@@ -7,9 +7,9 @@
 		<div class="row">
 			<div ng-repeat="mentor in mentors">
 				<div class="col s4">
-					<div class="card medium" ng-click="selectProfile(mentor)">
+					<div class="clickable card medium" ng-click="selectProfile(mentor)">
 						<div class="card-image">
-							<img src="http://i2.cdn.cnn.com/cnnnext/dam/assets/140929110109-michelle-kosinski-profile-image1-large-tease.jpg">
+							<img src="{{mentor.photo}}">
 							<span class="card-title white-text">{{mentor.name}} - {{mentor.age}}</span>
 						</div>
 						<div class="card-content">
@@ -17,11 +17,7 @@
 							<p>Additional Surgeries: {{mentor.additionalSurgeries}}</p>
 							<p>Recovery: {{mentor.recoveryPeriod}}</p>
 							<div ng-show="mentor.hormone">Hormone Replacement</div>	
-						</div>
-						<div class="card-action">
-							<a href="#">See My Profile</a>
-						</div>
-						
+						</div>						
 					</div>
 				</div>
 			</div>

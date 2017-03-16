@@ -1,11 +1,14 @@
 <div>
-	<div class="container">
+	<div>
 		<div class="row" style="height:100vh;">
 			<div class="col s3 pane" style="height:100vh;border-right: solid #000;">
 				<div style="height:40%;">
-					<h2>{{partner.name}}</h2>
-					<h5>{{partner.photo}}</h5>
-					<h5>{{partner.type}}</h5>
+					<br>
+					<img src="{{partner.photo}}" style="width:200px"/>
+					<h2>{{partner.name}}</h2>					
+					<div class="chip">
+						{{partner.type}} hysterectomy
+					</div>
 					<h5>{{partner.additionalSurgery}}</h5>
 				</div>
 				<div>
@@ -23,7 +26,7 @@
 								<p>
 									{{message.text}}
 								</p>
-								<button ng-click="saveNote($event)">save</button>
+								<button ng-click="saveNote($event)" class="saveButton">save</button>
 							</span>							
 						</li>
 					</ul>
