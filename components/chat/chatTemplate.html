@@ -1,21 +1,22 @@
 <div>
-
 	<div class="container">
-		<div class="row">
-			<div class="col s3 pane">
-				<h2>{{partner.name}}</h2>
-				<div>{{partner.photo}}</div>
-				<div>{{partner.type}}</div>
-				<div>{{partner.additionalSurgery}}</div>
+		<div class="row" style="height:100vh;">
+			<div class="col s3 pane" style="height:100vh;border-right: solid #000;">
+				<div style="height:40%;">
+					<h2>{{partner.name}}</h2>
+					<h5>{{partner.photo}}</h5>
+					<h5>{{partner.type}}</h5>
+					<h5>{{partner.additionalSurgery}}</h5>
+				</div>
 				<div>
 					<h3>Saved Notes</h3>
-					<div ng-repeat="note in notes">
+					<div ng-repeat="note in notes" style="height:60%;">
 						<p> {{note}} </p>
 					</div>
 				</div>
 			</div>
-			<div class="col s9 chatbox">
-				<div class = "row chat">
+			<div class="col s9 chatbox" style="height:100vh;padding-left: 15px;">
+				<div class="row chat" style="overflow:auto;max-height:80vh;width:60vh">
 					<ul id="messages">
 						<li ng-repeat="message in messages"> 
 							<span class="{{message.sender}}">
@@ -27,23 +28,25 @@
 						</li>
 					</ul>
 				</div>
-				<div class = "row suggestions">
-					<span ng-repeat = "suggestion in suggestions" class = "col s3">
-						<p>{{suggestion}}</p>
-					</span>
-				</div>
-				<div class = "row chatbox">
-					<div class = "input-field col s11">
-						<input ng-keypress="sendViaEnter($event)" placeholder="send a message" type="text" class="validate" id = "chatbox"/>
+				<div class="chat interface" style="position:absolute;bottom:0;width:60vh;">
+					<div class="row suggestions">
+						<span ng-repeat="suggestion in suggestions" class = "col s3">
+							<p>{{suggestion}}</p>
+						</span>
 					</div>
-					<div ng-click="sendViaClick()" class = "col s1">
-						<button>send</button>
+					<div class = "row chatbox">
+						<div class = "input-field col s11">
+							<input ng-keypress="sendViaEnter($event)" placeholder="send a message" type="text" class="validate" id = "chatbox"/>
+						</div>
+						<div ng-click="sendViaClick()" class = "col s1">
+							<button>send</button>
+						</div>
 					</div>
-				</div>
-				<div class = "stickers">
-					<span ng-repeat = "sticker in stickers">
-						<img src ={{sticker.src}}/>
-					</span>
+					<div class = "stickers">
+						<span ng-repeat = "sticker in stickers">
+							<img src ={{sticker.src}}/>
+						</span>
+					</div>
 				</div>
 			</div>
 		</div>
