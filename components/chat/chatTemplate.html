@@ -1,0 +1,51 @@
+<div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col s3 pane">
+				<h2>{{partner.name}}</h2>
+				<div>{{partner.photo}}</div>
+				<div>{{partner.type}}</div>
+				<div>{{partner.additionalSurgery}}</div>
+				<div>
+					<h3>Saved Notes</h3>
+					<div ng-repeat="note in notes">
+						<p> {{note}} </p>
+					</div>
+				</div>
+			</div>
+			<div class="col s9 chatbox">
+				<div class = "row chat">
+					<ul id="messages">
+						<li ng-repeat="message in messages"> 
+							<span class="{{message.sender}}">
+								<p>
+									{{message.text}}
+								</p>
+								<button ng-click="saveNote($event)">save</button>
+							</span>							
+						</li>
+					</ul>
+				</div>
+				<div class = "row suggestions">
+					<span ng-repeat = "suggestion in suggestions" class = "col s3">
+						<p>{{suggestion}}</p>
+					</span>
+				</div>
+				<div class = "row chatbox">
+					<div class = "input-field col s11">
+						<input ng-keypress="sendViaEnter($event)" placeholder="send a message" type="text" class="validate" id = "chatbox"/>
+					</div>
+					<div ng-click="sendViaClick()" class = "col s1">
+						<button>send</button>
+					</div>
+				</div>
+				<div class = "stickers">
+					<span ng-repeat = "sticker in stickers">
+						<img src ={{sticker.src}}/>
+					</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
