@@ -9,7 +9,7 @@
 			<img src="{{userDetails.photo}}" alt="This user hasn't uploaded a photo yet!">
 			<h1 style="text-align: center;">{{userDetails.name}} - {{userDetails.age}}</h1>
 			<div class="chip">
-				{{userDetails.type}}
+				{{userDetails.type}} hysterectomy
 			</div>
 			<div class="chip">
 				{{userDetails.additionalSurgeries}}
@@ -22,7 +22,7 @@
 			</div>
 	</div>
 	<div class = "row">
-			<button ng-click="chat(userDetails.id)" class="btn waves-effect waves-light pink" type="submit" name="action">Chat with {{userDetails.name}}
+			<button ng-click="chat(userDetails.id)" class="btn waves-effect waves-light pink" type="submit" name="action">		Chat with {{userDetails.name}}
 			</button>
 	</div>
 	</center>

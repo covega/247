@@ -18,3 +18,14 @@
 .clickable {
 	border-radius: 15px !important;
 }
+
+.saveButton {
+	font-size: 10px;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	border: none;
+	cursor: pointer;
+	overflow: hidden;
+	outline: none;
+	margin: 0px;
+}
