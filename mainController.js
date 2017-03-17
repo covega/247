@@ -113,6 +113,10 @@ cs247App.controller('MainController', ['$scope', '$rootScope', '$location',
 	        }
      	];
 
+     	$scope.goto = function (page) {
+     		$location.path(page);
+     	}
+
 }]);
 
 
