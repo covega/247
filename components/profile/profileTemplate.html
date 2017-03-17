@@ -10,27 +10,37 @@
 		</div>
 	</nav>
 	<center>
-	<div class="row">
-			<br><br>
-			<img src="{{userDetails.photo}}" alt="This user hasn't uploaded a photo yet!" style="height:60vh;">
-			<h1 style="text-align: center;">{{userDetails.name}} - {{userDetails.age}}</h1>
-			<div class="chip">
-				{{userDetails.type}} hysterectomy
-			</div>
-			<div class="chip">
-				{{userDetails.additionalSurgeries}}
-			</div>
-			<div class="chip">
-				{{userDetails.recoveryPeriod}} recovery
-			</div>
-			<div ng-show="userDetails.hormone" class="chip">
-				Hormone Replacement
-			</div>
+	<div ng-show="{{userDetails.name}}">
+		<div  class="row">
+				<br><br>
+				<img src="{{userDetails.photo}}" alt="This user hasn't uploaded a photo yet!" style="height:60vh;">
+				<h1 style="text-align: center;">{{userDetails.name}} - {{userDetails.age}}</h1>
+				<div class="chip">
+					{{userDetails.type}} hysterectomy
+				</div>
+				<div class="chip">
+					{{userDetails.additionalSurgeries}}
+				</div>
+				<div class="chip">
+					{{userDetails.recoveryPeriod}} recovery
+				</div>
+				<div ng-show="userDetails.hormone" class="chip">
+					Hormone Replacement
+				</div>
+		</div>
+		<div class = "row">
+				<button ng-click="chat(userDetails.id)" class="btn waves-effect waves-light pink" type="submit" name="action">		Chat with {{userDetails.name}}
+				</button>
+		</div>
 	</div>
-	<div class = "row">
-			<button ng-click="chat(userDetails.id)" class="btn waves-effect waves-light pink" type="submit" name="action">		Chat with {{userDetails.name}}
-			</button>
+	<div ng-show="!{{userDetails.name}}">
+		<br>
+		<br>
+		<br>
+		<div class = "row">
+			<p> You haven't finished registering yet! </p>
+			<button ng-click="profileCreation()" class = "btn waves-effect waves-light pinkButton">  Tell us more about yourself </button>		
+		</div>
 	</div>
 	</center>
-	</div>
 </div>
