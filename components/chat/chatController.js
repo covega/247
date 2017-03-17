@@ -5,9 +5,9 @@ cs247App.controller('ChatController', ['$scope', '$location', '$rootScope',
     /*
      *
      */
-     $scope.main = {};
+   $scope.main = $rootScope.main;
 
-     $scope.mentors = $rootScope.main.mentors;
+   $scope.mentors = $rootScope.main.mentors;
 
     var path = $location.path();
     var id = parseInt(path.substring(path.length-1));

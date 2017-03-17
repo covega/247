@@ -1,10 +1,16 @@
-<head>
-
-</head>
 <div ng-cloak>
+	<nav>
+		<div class="nav-wrapper">
+			<a href = "#" class="brand-logo">Hysterconnectomy</a>
+			<ul id="nav-mobile" class = "right hide-on-small-and-down">				
+				<li ng-click="goto('/profile/100')"><a>profile</a></li>	
+				<li ng-click="goto('/select')"><a>select</a></li>					
+				<li ng-click="goto('chat')"><a>chat</a></li>
+			</ul>
+		</div>
+	</nav>
 	<center>
 	<div class="row">
-
 			<br><br>
 			<img src="{{userDetails.photo}}" alt="This user hasn't uploaded a photo yet!" style="height:60vh;">
 			<h1 style="text-align: center;">{{userDetails.name}} - {{userDetails.age}}</h1>

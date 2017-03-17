@@ -42,7 +42,9 @@ cs247App.controller('MainController', ['$scope', '$rootScope', '$location',
         * recoveryPeriod: string // x days, months, etc
         * hormone: bool // whether or not they've had hormone replacement
         */
-        $rootScope.main.user = {};
+        $rootScope.main.user = {
+        	id: 100,
+        };
 
         $rootScope.main.mentors = [
 	        {
@@ -112,6 +114,17 @@ cs247App.controller('MainController', ['$scope', '$rootScope', '$location',
 	            date: "April '17",
 	        }
      	];
+
+     	$scope.goto = function (page) {
+     		if(page === "chat"){
+     			if($scope.main.user.mentorId) {
+     				page = "/chat/" + ($scope.main.user.mentorId);
+     			} else {
+     				page = "/select/"
+     			}
+     		}
+     		$location.path(page);
+     	}
 
 }]);
 
