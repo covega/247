@@ -11,7 +11,7 @@
 	</nav>
 	<div class="container">
 		<div class="row">
-			<h3>Connect with someone who has been through a hysterectomy</h3>
+			<h3>Talk to someone who's been there</h3>
 		</div>
 		<div class="row">
 			<div ng-repeat="mentor in mentors">
@@ -22,10 +22,11 @@
 						</div>
 						<div class="card-title black-text mentorName">{{mentor.name}} - {{mentor.age}}</div>
 						<div class="card-content">
-							<p>{{mentor.date}}, {{mentor.type}}</p>
-							<p>Additional Surgeries: {{mentor.additionalSurgeries}}</p>
-							<p>Recovery: {{mentor.recoveryPeriod}}</p>
-							<div ng-show="mentor.hormone">Hormone Replacement</div>	
+							<p> Surgery on {{mentor.date}}</p>
+							<div class="chip"> {{mentor.type}} </div>
+							<div class="chip">{{mentor.additionalSurgeries}}</div>
+							<div class="chip">{{mentor.recoveryPeriod}} recovery</div>
+							<div ng-show="mentor.hormone" class = "chip">Hormone Replacement</div>
 						</div>						
 					</div>
 				</div>

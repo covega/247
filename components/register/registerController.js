@@ -18,4 +18,8 @@ cs247App.controller('RegisterController', ['$scope', '$location', '$rootScope',
      $scope.selectHysterectomyType = function(type) {
           $rootScope.main.user.surgeryType = type;
      };
-  }]);
+
+     $scope.submit() {
+        $location.path("/select/");
+     }
+}]);
