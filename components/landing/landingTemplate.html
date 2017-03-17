@@ -1,15 +1,24 @@
 <div ng-cloak>
 	<div class="container">
-		<div class="row">
-			<h1> Welcome to</h1>
-			<h2> Hysterconnectomy </h2>
-			<p> Connect with someone who has been through this before, or be there for someone else </p>
+		<div class="row" style="position:relative;overflow:hidden;">
+			<div class="black-text" style="padding: 70px;position: relative;z-index: 2;">
+				<center>
+				<br>
+				<h3 style="font-weight: bold;"> Welcome to Hysterconnectomy </h3>
+					<p> Connect with someone who has been through this before, or be there for someone else </p>
+				</center>
+			</div>
+			<img src="../../images/Background.jpg" style="position: absolute;left: 0;top: 0;width: 100%;height: auto;opacity: 0.6;">
 		</div>
+		<center>
+			<h2>Join the Community</h2>
+			<p>Choose the one that best describes you</p>
+		</center>
 		<div class = "row">
 			<div class="col s6">			
 				<div class="clickable card small pink lighten-4" ng-click="selectPatientType(true)">
 					<div class="card-content white-text">
-						<span class="card-title" >I'm Looking for Support</span>
+						<span class="card-title"><h5>I'm Looking for Support</h5></span>
 						<br><br>
 						<p>I'm pre-op or post-op and I would like someone to talk to</p>
 					</div>
@@ -18,7 +27,7 @@
 			<div class="col s6">
 				<div class="clickable card small pink lighten-4" ng-click="selectPatientType(False)">
 					<div class="card-content white-text">
-						<span class="card-title">I Want to Provide Support</span>
+						<span class="card-title"><h5>I Want to Provide Support</h5></span>
 						<br><br>
 						<p>I've undergone a hysterectomy and am willing to answer questions</p>
 					</div>
