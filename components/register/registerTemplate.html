@@ -25,18 +25,6 @@
 						</div>
 					</div>
 					<div class="row">
-						<div class="input-field col s12">
-							<input id="password" type="password" class="validate">
-							<label for="password">Password</label>
-						</div>
-					</div>
-					<div class="row">
-						<div class="input-field col s12">
-							<input id="email" type="email" class="validate">
-							<label for="email">Email</label>
-						</div>
-					</div>
-					<div class="row">
 						<form class="col s12">
 							<div class="row">
 								<div class="input-field col s12">
@@ -53,7 +41,7 @@
 			</div>
 			<div class ="row">
 				<div class="col s4">
-					<div class="card small pink lighten-4" ng-click="selectHysterectomyType('partial')">
+					<div class="card small pink lighten-4 clickable" ng-click="selectHysterectomyType('partial')">
 						<div class="card-content">
 							<span class="card-title">Partial</span>
 							<p> Uterus </p>
@@ -61,7 +49,7 @@
 					</div>
 				</div>
 				<div class="col s4">
-					<div class="card small pink lighten-2" ng-click="selectHysterectomyType('total')">
+					<div class="card small pink lighten-2 clickable" ng-click="selectHysterectomyType('total')">
 						<div class="card-content">
 							<span class="card-title">Total</span>
 							<p> Uterus and Cervix </p>
@@ -69,7 +57,7 @@
 					</div>
 				</div>
 				<div class="col s4">
-					<div class="card small pink" ng-click="selectHysterectomyType('radical')">
+					<div class="card small pink clickable" ng-click="selectHysterectomyType('radical')">
 						<div class="card-content">
 							<span class="card-title">Radical</span>
 							<p> Uterus, cervix, and some vaginal tissue </p>
@@ -94,7 +82,7 @@
 			<div class="row">
 				<p>Pick an approximate date <input type="date" class="datepicker"></p>			
 			</div>
-			<a class="waves-effect waves-light btn">Submit</a>
+			<a ng-click = "submit()" class="waves-effect waves-light btn pinkButton">Submit</a>
 		</form>
 	</div>
 </div>
