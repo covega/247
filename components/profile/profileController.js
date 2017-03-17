@@ -20,4 +20,8 @@ cs247App.controller('ProfileController', ['$scope', '$location', '$rootScope',
      $scope.chat = function(id) {
         $location.path("/chat/" + id);
      };
+
+     $scope.profileCreation = function() {
+        $location.path("/register/");
+     }     
   }]);
