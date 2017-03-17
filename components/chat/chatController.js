@@ -50,7 +50,7 @@ cs247App.controller('ChatController', ['$scope', '$location', '$rootScope',
     }
 
     $scope.saveNote = function(event) {
-      var msg = $(event.target.parentNode).children()[0].innerHTML
+      var msg = $($(event.target.parentNode).parent().children()[0]).children()[0].innerHTML;    
       console.log(msg);
       $scope.notes.push(msg);
     }
