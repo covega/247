@@ -5,7 +5,7 @@ cs247App.controller('RegisterController', ['$scope', '$location', '$rootScope',
     /*
      *
      */
-     $scope.main = {};
+     $scope.main = $rootScope.main;
 
      $scope.main.reasons = ['Uterine fibroids', 'Abnormal bleeding', 'Cervical dysplasia',
      'Endometriosis', 'Cancer', 'Pelvic Relaxation'];

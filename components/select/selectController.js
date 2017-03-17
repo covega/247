@@ -6,9 +6,10 @@ cs247App.controller('SelectController', ['$scope', '$location', '$rootScope',
     /*
      *
      */
-     $scope.main = {};
+     $scope.main = $rootScope.main;
 
      $scope.selectProfile = function(user) {
+          $rootScope.main.user.mentorId = user.id;
           $location.path("/profile/" + user.id);
      };
 
