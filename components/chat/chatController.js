@@ -59,5 +59,9 @@ cs247App.controller('ChatController', ['$scope', '$location', '$rootScope',
       $scope.notes.push(msg);
     }
 
-
+    $scope.sendSticker = function(src) {
+      //var timeStamp = "<span class='time'><i>Delivered: " +  new Date().toLocaleString() + "</i></span>"
+      //$('#messages').append($("<li class ='user'><p>" + msg + timeStamp + "</p><br/></li>"));      
+      $('#messages').append($("<li class ='user'><img src='" + src + "' style='height: 100px'/> <br/></li>"));      
+    }
   }]);
