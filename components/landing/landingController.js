@@ -11,7 +11,11 @@ cs247App.controller('LandingController', ['$scope', '$location', '$rootScope',
         console.log($rootScope.main.user);
         $rootScope.main.user.currPatient = currPatient;
         console.log($rootScope.main.user);
-        $location.path("/select/");
+        if (currPatient) {
+            $location.path("/select/");
+        } else {
+            $location.path("/register/");
+        }
      };
 
   }]);
