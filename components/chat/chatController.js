@@ -9,6 +9,8 @@ cs247App.controller('ChatController', ['$scope', '$location', '$rootScope',
 
    $scope.mentors = $rootScope.main.mentors;
 
+   $scope.suggestions = ["What should I be eating?", "Are there resources you'd recommend?", "What do you wish you knew?"];
+
     var path = $location.path();
     var id = parseInt(path.substring(path.length-1));
     $scope.partner = $rootScope.main.mentors[id-1];

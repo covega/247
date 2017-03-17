@@ -14,11 +14,11 @@
 			<div class="col s3 pane" style="height:100vh;border-right: solid #000;">
 				<div style="height:50vh;">
 					<h4 style="font-weight: bold;">{{partner.name}}</h4>
-					<img src="{{partner.photo}}" style="width:200px"/>					
+					<img src="{{partner.photo}}" style="width:200px"/>		
 					<div class="chip">
 						{{partner.type}} hysterectomy
 					</div>
-					<h5>{{partner.additionalSurgery}}</h5>
+					<div class="chip">{{partner.date}}</div>
 					<p style="font-weight: bold;">Current Thoughts</p>
 					<p>Nama-stay In Bed!</p>
 					<p style="font-weight: bold;">Last Seen:</p>
@@ -52,8 +52,9 @@
 				</div>
 				<div class="chat interface" style="position:absolute;bottom:0;width:85vh;">
 					<div class="row suggestions">
-						<span ng-repeat="suggestion in suggestions" class = "col s3">
-							<p>{{suggestion}}</p>
+						<span> Try asking: </span>
+						<span ng-repeat="suggestion in suggestions">
+							<span class="chip">{{suggestion}}</span>
 						</span>
 					</div>
 					<div class = "row chatbox">
