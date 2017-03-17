@@ -14,6 +14,10 @@ cs247App.controller('SelectController', ['$scope', '$location', '$rootScope',
 
      $scope.mentors = $rootScope.main.mentors;
 
+     $scope.profileCreation = function() {
+        $location.path("/register/");
+     }
+
      // give mentors attributes based on the users attributes
 
 
