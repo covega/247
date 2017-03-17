@@ -27,8 +27,19 @@
 				<div ng-show="userDetails.hormone" class="chip">
 					Hormone Replacement
 				</div>
+				<div>
+					<h5> Surgery on {{userDetails.date}} </h5>
+				</div>
+				<br>
+				<div class = "line"></div>
+				<br>
+				<br>
+
+				<div ng-show="userDetails.bio" class = "bio">  {{userDetails.bio}} </div>
 		</div>
 		<div class = "row">
+				<br>
+				<br>
 				<button ng-click="chat(userDetails.id)" class="btn waves-effect waves-light pinkButton" type="submit" name="action">		Chat with {{userDetails.name}}
 				</button>
 		</div>
