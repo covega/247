@@ -19,7 +19,7 @@ cs247App.controller('RegisterController', ['$scope', '$location', '$rootScope',
           $rootScope.main.user.surgeryType = type;
      };
 
-     $scope.submit() {
+     $scope.submit = function() {
         $location.path("/select/");
-     }
+     };
 }]);
