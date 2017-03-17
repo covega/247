@@ -7,11 +7,12 @@
 		<div class="row">
 			<div ng-repeat="mentor in mentors">
 				<div class="col s4">
-					<div class="clickable card medium" ng-click="selectProfile(mentor)">
+					<div class="clickable card" ng-click="selectProfile(mentor)">
 						<div class="card-image">
 							<img src="{{mentor.photo}}">
-							<span class="card-title black-text">{{mentor.name}} - {{mentor.age}}</span>
+
 						</div>
+						<div class="card-title black-text mentorName">{{mentor.name}} - {{mentor.age}}</div>
 						<div class="card-content">
 							<p>{{mentor.date}}, {{mentor.type}}</p>
 							<p>Additional Surgeries: {{mentor.additionalSurgeries}}</p>
