@@ -26,7 +26,7 @@ cs247App.controller('ChatController', ['$scope', '$location', '$rootScope',
       },
       {
         text: 'Im here to help!',
-        sender: 'partner'
+        sender: 'partner',
       }
     ];
     
@@ -61,7 +61,11 @@ cs247App.controller('ChatController', ['$scope', '$location', '$rootScope',
 
     $scope.sendSticker = function(src) {
       //var timeStamp = "<span class='time'><i>Delivered: " +  new Date().toLocaleString() + "</i></span>"
-      //$('#messages').append($("<li class ='user'><p>" + msg + timeStamp + "</p><br/></li>"));      
-      $('#messages').append($("<li class ='user'><img src='" + src + "' style='height: 100px'/> <br/></li>"));      
+      //$('#messages').append($("<li class ='user'><p>" + msg + timeStamp + "</p><br/></li>"));    
+      $scope.messages.push({
+        image: src,
+        sender: 'user'
+      }); 
+      //$('#messages').append($("<li class ='user'> <br/></li>"));      
     }
   }]);

@@ -37,3 +37,13 @@
 .pinkButton {
 	background-color: #ee6e73 !important;
 }
+
+.line {
+	width: 400px;
+	height: 5px;
+	border-bottom: 1px solid grey;	
+}
+
+.bio {
+	width: 25%;
+}
